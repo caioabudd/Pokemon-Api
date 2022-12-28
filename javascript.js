@@ -16,7 +16,7 @@ function convertPokemonToLi(pokemon) {
             </ol>
             <img src="https://www.pngmart.com/files/11/Pokemon-Bulbasaur-PNG-Pic.png" alt="" height="">
         </div>
-        
+        <button onclick="abrirmodal()"class="btn">Ver dados</button>
     </li>
 
 `
@@ -32,3 +32,19 @@ pokeApi.getPokemons().then((pokemons) => {
         pokemonList.innerHTML += convertPokemonToLi(pokemon)
     }
 })
+
+function abrirmodal() {
+
+    let modal = document.querySelector('.modal')
+    modal.style.display = 'block';
+
+
+}
+
+function fechar() {
+
+    let modal = document.querySelector('.modal')
+    modal.style.display = 'none';
+
+
+}
